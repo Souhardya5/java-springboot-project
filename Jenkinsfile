@@ -16,10 +16,10 @@ pipeline {
         }
         stage('SonarQube analysis') {
             environment {
-                scannerHome = tool 'sonar-scanner-meportal'
+                scannerHome = tool 'Sonar-Scanner-meportal'
             }
             steps {
-                withSonarQubeEnv('sonar-server-meportal') {
+                withSonarQubeEnv('SonrQube-Server-meportal') {
                     sh "${scannerHome}/bin/sonar-scanner"
                 }
             }
